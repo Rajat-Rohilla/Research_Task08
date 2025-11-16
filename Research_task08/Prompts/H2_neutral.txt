@@ -1,0 +1,10 @@
+Season stats (Team total): Games 19, Goals 235, Shots 538, ShotPct .437, ShotsOnGoal 402, FreePos 44/90 (.489), DrawControls 240, Turnovers 270, CausedTurnovers 153.
+
+Top players (anonymized):
+- Player A: G=34, A=7, Shots=71, TO=13
+- Player B: G=32, A=11, Shots=72, TO=16
+- Player C: G=30, A=46, Shots=77, TO=41
+(Anonymized labels: Player A=Muchnick, Player B=Trinkaus, Player C=Ward)
+
+
+Which player should receive extra coaching time? Provide 2–3 specific recommendations supported by data.
