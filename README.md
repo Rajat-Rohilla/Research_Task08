@@ -1,4 +1,6 @@
-Mount Google Drive and Set Working Directory
+#Key Points - Just copy scripts and data to your Google drive. In script run_experiments use your OPENAI API KEY to move forward.
+
+1) Mount Google Drive and Set Working Directory
 
 Use Colab or your local environment:
 
@@ -12,29 +14,29 @@ WORKDIR = "/content/drive/MyDrive/Research_task08"
 
 os.chdir(WORKDIR)
 
-Install dependencies
+2) Install dependencies
 
 pip install -q pandas numpy scipy matplotlib nltk PyPDF2 openai anthropic
 
-Generate prompts
+3) Generate prompts
 
 python3 scripts/experiment_design.py --outdir ./Prompts --overwrite --verbose
 
-List generated prompts
+4) List generated prompts
 
 ls -la Prompts
 
 cat Prompts/all_prompts.jsonl | head   # Preview prompts
 
-Run prompt experiment
+5)Run prompt experiment
 
 python3 scripts/run_experiment.py --prompts ./Prompts/all_prompts.jsonl --models openai:gpt-4 --replicates 3 --temperature 0.0 --out ./results/h1_runs.ndjson
 
-Validate claims against ground truth
+6)Validate claims against ground truth
 
 python3 scripts/validate_claims.py --gt ./data/lacrosse_clean.csv --runs ./results/h1_runs.ndjson --out ./results/validations.ndjson
 
-Bias analysis
+7)Bias analysis
 
 python3 scripts/analyze_bias.py --runs results/h1_runs.ndjson --outdir analysis/
 # For more options:
